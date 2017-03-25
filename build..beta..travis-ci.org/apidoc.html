@@ -46,11 +46,11 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
-        
+
         href="https://github.com/visionmedia/supertest#readme"
-        
+
     >supertest (v3.0.0)</a>
 </h1>
 <h4>SuperAgent driven library for testing HTTP servers</h4>
@@ -58,459 +58,459 @@
     href="#apidoc.tableOfContents"
     id="apidoc.tableOfContents"
 ><h1>table of contents</h1></a><ol>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.supertest">module supertest</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.Test">
             function <span class="apidocSignatureSpan">supertest.</span>Test
             <span class="apidocSignatureSpan">(app, method, path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent">
             function <span class="apidocSignatureSpan">supertest.</span>agent
             <span class="apidocSignatureSpan">(app, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">supertest.</span>Test.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">supertest.</span>agent.prototype</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.supertest.Test">module supertest.Test</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.Test">
             function <span class="apidocSignatureSpan">supertest.</span>Test
             <span class="apidocSignatureSpan">(app, method, path)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.supertest.Test.prototype">module supertest.Test.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype._assertBody">
             function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertBody
             <span class="apidocSignatureSpan">(body, res)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype._assertFunction">
             function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertFunction
             <span class="apidocSignatureSpan">(check, res)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype._assertHeader">
             function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertHeader
             <span class="apidocSignatureSpan">(header, res)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype._assertStatus">
             function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertStatus
             <span class="apidocSignatureSpan">(status, res)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype.assert">
             function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>assert
             <span class="apidocSignatureSpan">(resError, res, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype.end">
             function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>end
             <span class="apidocSignatureSpan">(fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype.expect">
             function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>expect
             <span class="apidocSignatureSpan">(a, b, c)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype.serverAddress">
             function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>serverAddress
             <span class="apidocSignatureSpan">(app, path)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.supertest.agent">module supertest.agent</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.agent">
             function <span class="apidocSignatureSpan">supertest.</span>agent
             <span class="apidocSignatureSpan">(app, options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.supertest.agent.prototype">module supertest.agent.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.acl">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>acl
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.bind">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>bind
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.checkout">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>checkout
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.connect">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>connect
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.copy">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>copy
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.del">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>del
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.delete">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>delete
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.get">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>get
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.head">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>head
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.link">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>link
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.lock">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>lock
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.m-search">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>m-search
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.merge">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>merge
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.mkactivity">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>mkactivity
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.mkcalendar">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>mkcalendar
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.mkcol">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>mkcol
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.move">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>move
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.notify">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>notify
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.options">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>options
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.patch">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>patch
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.post">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>post
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.propfind">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>propfind
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.proppatch">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>proppatch
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.purge">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>purge
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.put">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>put
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.rebind">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>rebind
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.report">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>report
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.search">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>search
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.subscribe">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>subscribe
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.trace">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>trace
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.unbind">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unbind
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.unlink">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unlink
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.unlock">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unlock
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.unsubscribe">
             function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unsubscribe
             <span class="apidocSignatureSpan">(url, fn)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.supertest" id="apidoc.module.supertest">module supertest</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.supertest.Test" id="apidoc.element.supertest.Test">
         function <span class="apidocSignatureSpan">supertest.</span>Test
@@ -530,9 +530,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent" id="apidoc.element.supertest.agent">
         function <span class="apidocSignatureSpan">supertest.</span>agent
@@ -569,18 +569,18 @@ app.get(&#x27;/&#x27;, function(req, res) {
 });
 ...</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.supertest.Test" id="apidoc.module.supertest.Test">module supertest.Test</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.supertest.Test.Test" id="apidoc.element.supertest.Test.Test">
         function <span class="apidocSignatureSpan">supertest.</span>Test
@@ -600,14 +600,14 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.supertest.Test.prototype" id="apidoc.module.supertest.Test.prototype">module supertest.Test.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.supertest.Test.prototype._assertBody" id="apidoc.element.supertest.Test.prototype._assertBody">
         function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertBody
@@ -646,9 +646,9 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.Test.prototype._assertFunction" id="apidoc.element.supertest.Test.prototype._assertFunction">
         function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertFunction
@@ -667,9 +667,9 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.Test.prototype._assertHeader" id="apidoc.element.supertest.Test.prototype._assertHeader">
         function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertHeader
@@ -699,9 +699,9 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.Test.prototype._assertStatus" id="apidoc.element.supertest.Test.prototype._assertStatus">
         function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertStatus
@@ -720,9 +720,9 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.Test.prototype.assert" id="apidoc.element.supertest.Test.prototype.assert">
         function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>assert
@@ -766,9 +766,9 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.Test.prototype.end" id="apidoc.element.supertest.Test.prototype.end">
         function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>end
@@ -811,9 +811,9 @@ request(app)
 ```js
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.Test.prototype.expect" id="apidoc.element.supertest.Test.prototype.expect">
         function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>expect
@@ -868,9 +868,9 @@ request(app)
 ```
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.Test.prototype.serverAddress" id="apidoc.element.supertest.Test.prototype.serverAddress">
         function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>serverAddress
@@ -890,14 +890,14 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.supertest.agent" id="apidoc.module.supertest.agent">module supertest.agent</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.agent" id="apidoc.element.supertest.agent.agent">
         function <span class="apidocSignatureSpan">supertest.</span>agent
@@ -934,14 +934,14 @@ app.get(&#x27;/&#x27;, function(req, res) {
 });
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.supertest.agent.prototype" id="apidoc.module.supertest.agent.prototype">module supertest.agent.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.acl" id="apidoc.element.supertest.agent.prototype.acl">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>acl
@@ -964,9 +964,9 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.bind" id="apidoc.element.supertest.agent.prototype.bind">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>bind
@@ -989,9 +989,9 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.checkout" id="apidoc.element.supertest.agent.prototype.checkout">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>checkout
@@ -1014,9 +1014,9 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.connect" id="apidoc.element.supertest.agent.prototype.connect">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>connect
@@ -1039,9 +1039,9 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.copy" id="apidoc.element.supertest.agent.prototype.copy">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>copy
@@ -1064,9 +1064,9 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.del" id="apidoc.element.supertest.agent.prototype.del">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>del
@@ -1089,9 +1089,9 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.delete" id="apidoc.element.supertest.agent.prototype.delete">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>delete
@@ -1114,9 +1114,9 @@ app.get(&#x27;/&#x27;, function(req, res) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.get" id="apidoc.element.supertest.agent.prototype.get">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>get
@@ -1155,9 +1155,9 @@ request(app)
 .expect(&#x27;Content-Length&#x27;, &#x27;15&#x27;)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.head" id="apidoc.element.supertest.agent.prototype.head">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>head
@@ -1180,9 +1180,9 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.link" id="apidoc.element.supertest.agent.prototype.link">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>link
@@ -1205,9 +1205,9 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.lock" id="apidoc.element.supertest.agent.prototype.lock">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>lock
@@ -1230,9 +1230,9 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.m-search" id="apidoc.element.supertest.agent.prototype.m-search">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>m-search
@@ -1255,9 +1255,9 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.merge" id="apidoc.element.supertest.agent.prototype.merge">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>merge
@@ -1280,9 +1280,9 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.mkactivity" id="apidoc.element.supertest.agent.prototype.mkactivity">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>mkactivity
@@ -1305,9 +1305,9 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.mkcalendar" id="apidoc.element.supertest.agent.prototype.mkcalendar">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>mkcalendar
@@ -1330,9 +1330,9 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.mkcol" id="apidoc.element.supertest.agent.prototype.mkcol">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>mkcol
@@ -1355,9 +1355,9 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.move" id="apidoc.element.supertest.agent.prototype.move">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>move
@@ -1380,9 +1380,9 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.notify" id="apidoc.element.supertest.agent.prototype.notify">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>notify
@@ -1405,9 +1405,9 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.options" id="apidoc.element.supertest.agent.prototype.options">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>options
@@ -1430,9 +1430,9 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.patch" id="apidoc.element.supertest.agent.prototype.patch">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>patch
@@ -1455,9 +1455,9 @@ request(app)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.post" id="apidoc.element.supertest.agent.prototype.post">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>post
@@ -1496,9 +1496,9 @@ Passing the app or url each time is not necessary, if you&#x27;re testing
 the same host you may simply re-assign the request variable with the
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.propfind" id="apidoc.element.supertest.agent.prototype.propfind">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>propfind
@@ -1521,9 +1521,9 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.proppatch" id="apidoc.element.supertest.agent.prototype.proppatch">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>proppatch
@@ -1546,9 +1546,9 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.purge" id="apidoc.element.supertest.agent.prototype.purge">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>purge
@@ -1571,9 +1571,9 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.put" id="apidoc.element.supertest.agent.prototype.put">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>put
@@ -1596,9 +1596,9 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.rebind" id="apidoc.element.supertest.agent.prototype.rebind">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>rebind
@@ -1621,9 +1621,9 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.report" id="apidoc.element.supertest.agent.prototype.report">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>report
@@ -1646,9 +1646,9 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.search" id="apidoc.element.supertest.agent.prototype.search">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>search
@@ -1671,9 +1671,9 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.subscribe" id="apidoc.element.supertest.agent.prototype.subscribe">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>subscribe
@@ -1696,9 +1696,9 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.trace" id="apidoc.element.supertest.agent.prototype.trace">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>trace
@@ -1721,9 +1721,9 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.unbind" id="apidoc.element.supertest.agent.prototype.unbind">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unbind
@@ -1746,9 +1746,9 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.unlink" id="apidoc.element.supertest.agent.prototype.unlink">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unlink
@@ -1771,9 +1771,9 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.unlock" id="apidoc.element.supertest.agent.prototype.unlock">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unlock
@@ -1796,9 +1796,9 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.supertest.agent.prototype.unsubscribe" id="apidoc.element.supertest.agent.prototype.unsubscribe">
         function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unsubscribe
@@ -1821,8 +1821,8 @@ the same host you may simply re-assign the request variable with the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocFooterDiv">
