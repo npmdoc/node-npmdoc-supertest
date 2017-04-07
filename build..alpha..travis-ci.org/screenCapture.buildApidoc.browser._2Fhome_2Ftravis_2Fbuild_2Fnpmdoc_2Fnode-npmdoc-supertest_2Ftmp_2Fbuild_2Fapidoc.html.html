@@ -1,0 +1,1827 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/visionmedia/supertest#readme">supertest (v3.0.0)</a>
+</h1>
+<h4>SuperAgent driven library for testing HTTP servers</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.supertest">module supertest</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.Test">
+            function <span class="apidocSignatureSpan">supertest.</span>Test
+            <span class="apidocSignatureSpan">(app, method, path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent">
+            function <span class="apidocSignatureSpan">supertest.</span>agent
+            <span class="apidocSignatureSpan">(app, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">supertest.</span>Test.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">supertest.</span>agent.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.supertest.Test">module supertest.Test</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.Test">
+            function <span class="apidocSignatureSpan">supertest.</span>Test
+            <span class="apidocSignatureSpan">(app, method, path)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.supertest.Test.prototype">module supertest.Test.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype._assertBody">
+            function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertBody
+            <span class="apidocSignatureSpan">(body, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype._assertFunction">
+            function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertFunction
+            <span class="apidocSignatureSpan">(check, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype._assertHeader">
+            function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertHeader
+            <span class="apidocSignatureSpan">(header, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype._assertStatus">
+            function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertStatus
+            <span class="apidocSignatureSpan">(status, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype.assert">
+            function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>assert
+            <span class="apidocSignatureSpan">(resError, res, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype.end">
+            function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>end
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype.expect">
+            function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>expect
+            <span class="apidocSignatureSpan">(a, b, c)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.Test.prototype.serverAddress">
+            function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>serverAddress
+            <span class="apidocSignatureSpan">(app, path)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.supertest.agent">module supertest.agent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.agent">
+            function <span class="apidocSignatureSpan">supertest.</span>agent
+            <span class="apidocSignatureSpan">(app, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.supertest.agent.prototype">module supertest.agent.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.acl">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>acl
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.bind">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>bind
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.checkout">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>checkout
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.connect">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>connect
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.copy">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>copy
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.del">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>del
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.delete">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>delete
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.get">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>get
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.head">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>head
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.link">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>link
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.lock">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>lock
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.m-search">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>m-search
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.merge">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>merge
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.mkactivity">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>mkactivity
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.mkcalendar">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>mkcalendar
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.mkcol">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>mkcol
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.move">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>move
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.notify">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>notify
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.options">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>options
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.patch">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>patch
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.post">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>post
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.propfind">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>propfind
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.proppatch">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>proppatch
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.purge">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>purge
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.put">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>put
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.rebind">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>rebind
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.report">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>report
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.search">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>search
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.subscribe">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>subscribe
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.trace">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>trace
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.unbind">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unbind
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.unlink">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unlink
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.unlock">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unlock
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.agent.prototype.unsubscribe">
+            function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unsubscribe
+            <span class="apidocSignatureSpan">(url, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.supertest" id="apidoc.module.supertest">module supertest</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.Test" id="apidoc.element.supertest.Test">
+        function <span class="apidocSignatureSpan">supertest.</span>Test
+        <span class="apidocSignatureSpan">(app, method, path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Test(app, method, path) {
+  Request.call(this, method.toUpperCase(), path);
+  this.redirects(0);
+  this.buffer();
+  this.app = app;
+  this._asserts = [];
+  this.url = typeof app === 'string'
+    ? app + path
+    : this.serverAddress(app, path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent" id="apidoc.element.supertest.agent">
+        function <span class="apidocSignatureSpan">supertest.</span>agent
+        <span class="apidocSignatureSpan">(app, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TestAgent(app, options) {
+  if (!(this instanceof TestAgent)) return new TestAgent(app, options);
+  if (typeof app === 'function') app = http.createServer(app);  // eslint-disable-line no-param-reassign
+  if (options) {
+    this._ca = options.ca;
+    this._key = options.key;
+    this._cert = options.cert;
+  }
+  Agent.call(this);
+  this.app = app;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+const request = require('supertest');
+const should = require('should');
+const express = require('express');
+const cookieParser = require('cookie-parser');
+
+describe('request.<span class="apidocCodeKeywordSpan">agent</span>(app)', function() {
+const app = express();
+app.use(cookieParser());
+
+app.get('/', function(req, res) {
+  res.cookie('cookie', 'hey');
+  res.send();
+});
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.supertest.Test" id="apidoc.module.supertest.Test">module supertest.Test</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.Test.Test" id="apidoc.element.supertest.Test.Test">
+        function <span class="apidocSignatureSpan">supertest.</span>Test
+        <span class="apidocSignatureSpan">(app, method, path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Test(app, method, path) {
+  Request.call(this, method.toUpperCase(), path);
+  this.redirects(0);
+  this.buffer();
+  this.app = app;
+  this._asserts = [];
+  this.url = typeof app === 'string'
+    ? app + path
+    : this.serverAddress(app, path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.supertest.Test.prototype" id="apidoc.module.supertest.Test.prototype">module supertest.Test.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.Test.prototype._assertBody" id="apidoc.element.supertest.Test.prototype._assertBody">
+        function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertBody
+        <span class="apidocSignatureSpan">(body, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_assertBody = function (body, res) {
+  var isregexp = body instanceof RegExp;
+  var a;
+  var b;
+
+  // parsed
+  if (typeof body === 'object' &amp;&amp; !isregexp) {
+    try {
+      assert.deepEqual(body, res.body);
+    } catch (err) {
+      a = util.inspect(body);
+      b = util.inspect(res.body);
+      return error('expected ' + a + ' response body, got ' + b, body, res.body);
+    }
+  } else if (body !== res.text) {
+    // string
+    a = util.inspect(body);
+    b = util.inspect(res.text);
+
+    // regexp
+    if (isregexp) {
+      if (!body.test(res.text)) {
+        return error('expected body ' + b + ' to match ' + body, body, res.body);
+      }
+    } else {
+      return error('expected ' + a + ' response body, got ' + b, body, res.body);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.Test.prototype._assertFunction" id="apidoc.element.supertest.Test.prototype._assertFunction">
+        function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertFunction
+        <span class="apidocSignatureSpan">(check, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_assertFunction = function (check, res) {
+  var err;
+  try {
+    err = check(res);
+  } catch (e) {
+    err = e;
+  }
+  if (err instanceof Error) return err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.Test.prototype._assertHeader" id="apidoc.element.supertest.Test.prototype._assertHeader">
+        function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertHeader
+        <span class="apidocSignatureSpan">(header, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_assertHeader = function (header, res) {
+  var field = header.name;
+  var actual = res.header[field.toLowerCase()];
+  var fieldExpected = header.value;
+
+  if (typeof actual === 'undefined') return new Error('expected "' + field + '" header field');
+  // This check handles header values that may be a String or single element Array
+  if ((actual instanceof Array &amp;&amp; actual.toString() === fieldExpected) ||
+    fieldExpected === actual) {
+    return;
+  }
+  if (fieldExpected instanceof RegExp) {
+    if (!fieldExpected.test(actual)) {
+      return new Error('expected "' + field + '" matching ' +
+        fieldExpected + ', got "' + actual + '"');
+    }
+  } else {
+    return new Error('expected "' + field + '" of "' + fieldExpected + '", got "' + actual + '"');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.Test.prototype._assertStatus" id="apidoc.element.supertest.Test.prototype._assertStatus">
+        function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>_assertStatus
+        <span class="apidocSignatureSpan">(status, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_assertStatus = function (status, res) {
+  var a;
+  var b;
+  if (res.status !== status) {
+    a = http.STATUS_CODES[status];
+    b = http.STATUS_CODES[res.status];
+    return new Error('expected ' + status + ' "' + a + '", got ' + res.status + ' "' + b + '"');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.Test.prototype.assert" id="apidoc.element.supertest.Test.prototype.assert">
+        function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>assert
+        <span class="apidocSignatureSpan">(resError, res, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">assert = function (resError, res, fn) {
+  var error;
+  var i;
+
+  // check for unexpected network errors or server not running/reachable errors
+  // when there is no response and superagent sends back a System Error
+  // do not check further for other asserts, if any, in such case
+  // https://nodejs.org/api/errors.html#errors_common_system_errors
+  var sysErrors = {
+    ECONNREFUSED: 'Connection refused',
+    ECONNRESET: 'Connection reset by peer',
+    EPIPE: 'Broken pipe',
+    ETIMEDOUT: 'Operation timed out'
+  };
+
+  if (!res &amp;&amp; resError &amp;&amp; (resError instanceof Error) &amp;&amp; (resError.syscall === 'connect')
+      &amp;&amp; (Object.getOwnPropertyNames(sysErrors).indexOf(resError.code) &gt;= 0)) {
+    error = new Error(resError.code + ': ' + sysErrors[resError.code]);
+    fn.call(this, error, null);
+    return;
+  }
+
+  // asserts
+  for (i = 0; i &lt; this._asserts.length &amp;&amp; !error; i += 1) {
+    error = this._assertFunction(this._asserts[i], res);
+  }
+
+  // set unexpected superagent error if no other error has occurred.
+  if (!error &amp;&amp; resError instanceof Error &amp;&amp; (!res || resError.status !== res.status)) {
+    error = resError;
+  }
+
+  fn.call(this, error || null, res);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.Test.prototype.end" id="apidoc.element.supertest.Test.prototype.end">
+        function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>end
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (fn) {
+  var self = this;
+  var server = this._server;
+  var end = Request.prototype.end;
+
+  end.call(this, function(err, res) {
+    if (server &amp;&amp; server._handle) return server.close(assert);
+
+    assert();
+
+    function assert() {
+      self.assert(err, res, fn);
+    }
+  });
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+request(app)
+  .get('/user')
+  .expect('Content-Type', /json/)
+  .expect('Content-Length', '15')
+  .expect(200)
+  .<span class="apidocCodeKeywordSpan">end</span>(function(err, res) {
+    if (err) throw err;
+  });
+```
+
+  Here's an example with mocha, note how you can pass `done` straight to any of the `.expect()` calls:
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.Test.prototype.expect" id="apidoc.element.supertest.Test.prototype.expect">
+        function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>expect
+        <span class="apidocSignatureSpan">(a, b, c)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">expect = function (a, b, c) {
+  // callback
+  if (typeof a === 'function') {
+    this._asserts.push(a);
+    return this;
+  }
+  if (typeof b === 'function') this.end(b);
+  if (typeof c === 'function') this.end(c);
+
+  // status
+  if (typeof a === 'number') {
+    this._asserts.push(this._assertStatus.bind(this, a));
+    // body
+    if (typeof b !== 'function' &amp;&amp; arguments.length &gt; 1) {
+      this._asserts.push(this._assertBody.bind(this, b));
+    }
+    return this;
+  }
+
+  // header field
+  if (typeof b === 'string' || typeof b === 'number' || b instanceof RegExp) {
+    this._asserts.push(this._assertHeader.bind(this, { name: '' + a, value: b }));
+    return this;
+  }
+
+  // body
+  this._asserts.push(this._assertBody.bind(this, a));
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.get('/user', function(req, res) {
+  res.status(200).json({ name: 'tobi' });
+});
+
+request(app)
+  .get('/user')
+  .<span class="apidocCodeKeywordSpan">expect</span>('Content-Type', /json/)
+  .expect('Content-Length', '15')
+  .expect(200)
+  .end(function(err, res) {
+    if (err) throw err;
+  });
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.Test.prototype.serverAddress" id="apidoc.element.supertest.Test.prototype.serverAddress">
+        function <span class="apidocSignatureSpan">supertest.Test.prototype.</span>serverAddress
+        <span class="apidocSignatureSpan">(app, path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serverAddress = function (app, path) {
+  var addr = app.address();
+  var port;
+  var protocol;
+
+  if (!addr) this._server = app.listen(0);
+  port = app.address().port;
+  protocol = app instanceof https.Server ? 'https' : 'http';
+  return protocol + '://127.0.0.1:' + port + path;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.supertest.agent" id="apidoc.module.supertest.agent">module supertest.agent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.agent" id="apidoc.element.supertest.agent.agent">
+        function <span class="apidocSignatureSpan">supertest.</span>agent
+        <span class="apidocSignatureSpan">(app, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TestAgent(app, options) {
+  if (!(this instanceof TestAgent)) return new TestAgent(app, options);
+  if (typeof app === 'function') app = http.createServer(app);  // eslint-disable-line no-param-reassign
+  if (options) {
+    this._ca = options.ca;
+    this._key = options.key;
+    this._cert = options.cert;
+  }
+  Agent.call(this);
+  this.app = app;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+const request = require('supertest');
+const should = require('should');
+const express = require('express');
+const cookieParser = require('cookie-parser');
+
+describe('request.<span class="apidocCodeKeywordSpan">agent</span>(app)', function() {
+const app = express();
+app.use(cookieParser());
+
+app.get('/', function(req, res) {
+  res.cookie('cookie', 'hey');
+  res.send();
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.supertest.agent.prototype" id="apidoc.module.supertest.agent.prototype">module supertest.agent.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.acl" id="apidoc.element.supertest.agent.prototype.acl">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>acl
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">acl = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.bind" id="apidoc.element.supertest.agent.prototype.bind">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>bind
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bind = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.checkout" id="apidoc.element.supertest.agent.prototype.checkout">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>checkout
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkout = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.connect" id="apidoc.element.supertest.agent.prototype.connect">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>connect
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.copy" id="apidoc.element.supertest.agent.prototype.copy">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>copy
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">copy = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.del" id="apidoc.element.supertest.agent.prototype.del">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>del
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">del = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.delete" id="apidoc.element.supertest.agent.prototype.delete">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>delete
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.get" id="apidoc.element.supertest.agent.prototype.get">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>get
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+const request = require('supertest');
+const express = require('express');
+
+const app = express();
+
+app.<span class="apidocCodeKeywordSpan">get</span>('/user', function(req, res) {
+res.status(200).json({ name: 'tobi' });
+});
+
+request(app)
+.get('/user')
+.expect('Content-Type', /json/)
+.expect('Content-Length', '15')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.head" id="apidoc.element.supertest.agent.prototype.head">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>head
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">head = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.link" id="apidoc.element.supertest.agent.prototype.link">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>link
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">link = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.lock" id="apidoc.element.supertest.agent.prototype.lock">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>lock
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lock = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.m-search" id="apidoc.element.supertest.agent.prototype.m-search">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>m-search
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">m-search = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.merge" id="apidoc.element.supertest.agent.prototype.merge">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>merge
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">merge = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.mkactivity" id="apidoc.element.supertest.agent.prototype.mkactivity">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>mkactivity
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkactivity = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.mkcalendar" id="apidoc.element.supertest.agent.prototype.mkcalendar">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>mkcalendar
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkcalendar = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.mkcol" id="apidoc.element.supertest.agent.prototype.mkcol">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>mkcol
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkcol = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.move" id="apidoc.element.supertest.agent.prototype.move">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>move
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">move = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.notify" id="apidoc.element.supertest.agent.prototype.notify">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>notify
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notify = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.options" id="apidoc.element.supertest.agent.prototype.options">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>options
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">options = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.patch" id="apidoc.element.supertest.agent.prototype.patch">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>patch
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">patch = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.post" id="apidoc.element.supertest.agent.prototype.post">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>post
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">post = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+```
+
+Anything you can do with superagent, you can do with supertest - for example multipart file uploads!
+
+```js
+request(app)
+.<span class="apidocCodeKeywordSpan">post</span>('/')
+.field('name', 'my awesome avatar')
+.attach('avatar', 'test/fixtures/homeboy.jpg')
+...
+```
+
+Passing the app or url each time is not necessary, if you're testing
+the same host you may simply re-assign the request variable with the
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.propfind" id="apidoc.element.supertest.agent.prototype.propfind">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>propfind
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">propfind = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.proppatch" id="apidoc.element.supertest.agent.prototype.proppatch">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>proppatch
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">proppatch = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.purge" id="apidoc.element.supertest.agent.prototype.purge">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>purge
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">purge = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.put" id="apidoc.element.supertest.agent.prototype.put">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>put
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">put = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.rebind" id="apidoc.element.supertest.agent.prototype.rebind">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>rebind
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rebind = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.report" id="apidoc.element.supertest.agent.prototype.report">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>report
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">report = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.search" id="apidoc.element.supertest.agent.prototype.search">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>search
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">search = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.subscribe" id="apidoc.element.supertest.agent.prototype.subscribe">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>subscribe
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscribe = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.trace" id="apidoc.element.supertest.agent.prototype.trace">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>trace
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trace = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.unbind" id="apidoc.element.supertest.agent.prototype.unbind">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unbind
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unbind = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.unlink" id="apidoc.element.supertest.agent.prototype.unlink">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unlink
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unlink = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.unlock" id="apidoc.element.supertest.agent.prototype.unlock">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unlock
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unlock = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.agent.prototype.unsubscribe" id="apidoc.element.supertest.agent.prototype.unsubscribe">
+        function <span class="apidocSignatureSpan">supertest.agent.prototype.</span>unsubscribe
+        <span class="apidocSignatureSpan">(url, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unsubscribe = function (url, fn) {   // eslint-disable-line no-unused-vars
+  var req = new Test(this.app, method.toUpperCase(), url);
+  req.ca(this._ca);
+  req.cert(this._cert);
+  req.key(this._key);
+
+  req.on('response', this._saveCookies.bind(this));
+  req.on('redirect', this._saveCookies.bind(this));
+  req.on('redirect', this._attachCookies.bind(this, req));
+  this._attachCookies(req);
+
+  return req;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
