@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.supertest.supertest">
+            function <span class="apidocSignatureSpan"></span>supertest
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.supertest.Test">
             function <span class="apidocSignatureSpan">supertest.</span>Test
             <span class="apidocSignatureSpan">(app, method, path)</span>
@@ -509,6 +518,33 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.supertest" id="apidoc.module.supertest">module supertest</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.supertest.supertest" id="apidoc.element.supertest.supertest">
+        function <span class="apidocSignatureSpan"></span>supertest
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">supertest = function (app){
+  if (&#x27;function&#x27; == typeof app) app = http.createServer(app);
+  var obj = {};
+
+  methods.forEach(function(method){
+    obj[method] = function(url){
+      return new Test(app, method, url);
+    };
+  });
+
+  // Support previous use of del
+  obj.del = obj[&#x27;delete&#x27;];
+
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
